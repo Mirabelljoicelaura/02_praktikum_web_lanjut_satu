@@ -31,14 +31,18 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // JOBSHEET 2 Praktikum 1
-Route::get('/',function(){
-    echo "Selamat Datang ";
-});
-Route::get('/about',function(){
-    echo "Nama : Mirabell Joice Laura <br>";
-    echo "NIM : 2141720174";
-});
-Route::get('/articles/{id}',function($id){
-    echo"Halaman artikel dengan ID : $id";
-});
+// Route::get('/',function(){
+//     echo "Selamat Datang ";
+// });
+// Route::get('/about',function(){
+//     echo "Nama : Mirabell Joice Laura <br>";
+//     echo "NIM : 2141720174";
+// });
+// Route::get('/articles/{id}',function($id){
+//     echo"Halaman artikel dengan ID : $id";
+// });
 
+//JOBSHEET 2 Praktikum 2
+Route::get('/',[PageController::class,"index"]);
+Route::get('/about',[PageController::class,"about"]);
+Route::get('/articles/{id}',[PageController::class,"articles"]);
